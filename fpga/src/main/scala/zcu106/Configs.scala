@@ -62,10 +62,18 @@ class RocketZCU106Config extends Config(
   new chipyard.RocketConfig)
 // DOC include end: AbstractZCU106 and Rocket
 
+class DualRocketZCU106Config extends Config(
+  new WithZCU106Tweaks ++
+  new chipyard.DualRocketConfig)
+
+class QuadRocketZCU106Config extends Config(
+  new WithZCU106Tweaks ++
+  new chipyard.QuadRocketConfig)
+
 class BoomZCU106Config extends Config(
   new WithFPGAFrequency(50) ++
   new WithZCU106Tweaks ++
-  new chipyard.MegaBoomConfig)
+  new chipyard.MediumBoomConfig)
 
 class WithFPGAFrequency(fMHz: Double) extends Config(
   new chipyard.config.WithPeripheryBusFrequency(fMHz) ++ // assumes using PBUS as default freq.
