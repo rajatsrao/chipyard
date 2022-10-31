@@ -115,6 +115,10 @@ class GPIORocketConfig extends Config(
   new chipyard.config.AbstractConfig)
 // DOC include end: GPIORocketConfig
 
+class DualRocketConfig extends Config(
+  new freechips.rocketchip.subsystem.WithNBigCores(2) ++    // quad-core (2 RocketTiles)
+  new chipyard.config.AbstractConfig)
+
 class QuadRocketConfig extends Config(
   new freechips.rocketchip.subsystem.WithNBigCores(4) ++    // quad-core (4 RocketTiles)
   new chipyard.config.AbstractConfig)
