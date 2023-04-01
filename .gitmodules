@@ -133,3 +133,6 @@
 [submodule "generators/mempress"]
 	path = generators/mempress
 	url = https://github.com/ucb-bar/mempress.git
+[submodule "software/riscv-hpmcounters"]
+	path = software/riscv-hpmcounters
+	url = git@github.com:rajatsrao/riscv-hpmcounters.git
